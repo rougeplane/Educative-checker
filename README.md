@@ -13,4 +13,4 @@ How to use: Click on the extension icon in extension panel on top right while on
 
 Elements which are correct will be highlighted green. Elements which are incorrect will be highlighted red. Backlinks to educative.io will be highlighted blue. Backlinks not to educative.io will be highlighted red.
 
-All Errors will be logged and can be viewed in console of browser. ps: console of browser can be accessed by pressing Ctrl + Shift + i.
+All Errors will be logged and can be viewed in console of browser. ps: console of browser can be accessed by pressing Ctrl + Shift + I.
