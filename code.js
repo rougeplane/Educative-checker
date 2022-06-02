@@ -34,14 +34,15 @@ function gotMessage(message,sender,sendresponse)
     // checking the title
     titleCheck()
 
-    // checking the subtitles
+    // checking the subtitles (h2, h3, h4)
     sectionTitle()
     subSectionTitle()
+    h4()
 
-    // checking for captions
+    // checking for captions (if they have period at the end)
     captions()
 
-    // checking backlinks
+    // checking backlinks other than educative
     backlinks()   
 
 }
@@ -160,7 +161,8 @@ function captions()
     }
 }
 
-function backlinks(){
+function backlinks()
+{
     let links = document.getElementsByTagName("a")
     
     for (elt of links)
@@ -174,6 +176,30 @@ function backlinks(){
             elt.style['background-color'] = '#fa5246';
             console.log("Wrong link " + elt.href)
         }
+    }
+}
+
+function h4()
+{
+    let subTitle = document.getElementsByTagName("H4");
+
+    for (elt of subTitle) 
+    {
+        titleText = elt.innerHTML;
+
+        // Checking the text if sentence case
+    
+        if (titleText[0][0] != titleText[0][0].toUpperCase())
+        {
+            flagParagraph = true;
+            console.log("The word in sub section title doesn't seem right " + i);
+            elt.style['background-color'] = '#fa5246';
+        }
+        else
+        {
+            elt.style['background-color'] = '#00ff00';
+        }
+        
     }
 }
 
